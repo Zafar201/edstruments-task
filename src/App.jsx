@@ -8,9 +8,10 @@ import {
 import PrivateRoute from "./components/Auth/PrivateRoute";
 import RegisterPage from "./pages/RegisterPage";
 import ErrorBoundary from "./components/error/ErrorBoundary";
+import LoginPage from './pages/LoginPage'
 
 const TaskManager = lazy(() => import("./pages/TaskManagementPage"));
-const LoginPage = lazy(() => import("./pages/LoginPage"));
+// const LoginPage = lazy(() => import("./pages/LoginPage"));
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            <Route path="/" element={<LoginPage />} />
+            <Route path="/" element={<LoginPage/>} />
             <Route path="/register" element={<RegisterPage />} />
 
             <Route
